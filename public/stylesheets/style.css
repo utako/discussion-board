@@ -1,0 +1,151 @@
+html, body {
+}
+
+.container {
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+#welcome {
+  margin-top: 2pc;
+  margin-bottom: 2pc;
+  font: 50px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+a {
+  color: #7A2828;
+}
+
+ul {
+  list-style: none;
+}
+
+.topic-header {
+/*  border: 1px solid #EDEDED;*/
+}
+
+.glyphicon {
+  font-weight: 10;
+  margin-right: 1pc;
+}
+
+.topic-header h1 {
+  font-weight: 400;
+  color: #333;
+  padding: 8px;
+  margin: 0;
+}
+
+.topic-header:hover {
+  cursor: pointer;
+  background-color: #FCFCFC;
+  text-shadow: 0 0 0.1em #C5D3E0;
+}
+
+.topic-body {
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+
+.time {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #777;
+}
+
+.comment-header {
+  background-color: #DAE2EB;
+  color: #333;
+  padding: 8px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  border-radius: 3px;
+}
+
+.comment-header span {
+  color: #FCFCFC;
+  margin-left: 8px;
+  margin-top: 1px;
+}
+
+.comment-header h2 {
+  font-size: 22px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.parent {
+  background-color: #CAD8E8;
+}
+
+li p {
+  margin-left: 1pc;
+  margin-bottom: 1pc;
+}
+
+p a {
+  color: #B83535;
+}
+
+.comment-footer {
+  display: none;
+  width: 100%;
+  color: #7994B0;
+  text-align: right;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+
+.comment-form {
+  margin-top: -8px;
+  margin-left: 1pc;
+  margin-bottom: 1pc;
+  text-align: right;
+}
+
+.comment-form input[type='text'] {
+  text-align: left;
+  width: 100%;
+  height: 40px;
+  margin-top: 2pc;
+  margin-left: -8px;
+}
+
+.comment-form input[type='submit'] {
+  margin-top: -2pc;
+  margin-right: 8px;
+}
+
+input[type='text']:focus {
+  border-color: rgba(147, 167, 184, 0.8);
+  border-color: #87939C;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(147, 167, 184, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(147, 167, 184, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(147, 167, 184, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(147, 167, 184, 0.6);
+}
+
+#cancel {
+  margin-top: 5px;
+  color: #9E3737;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+#cancel:hover {
+  cursor: pointer;
+}
+
+.comment-button {
+  margin-right: 1pc;
+  color: #7A2828;
+  font-size: 18px;
+}
+
+.comment-button:hover {
+  color: #7A2828;
+  font-size: 18px;
+  cursor: pointer;
+}

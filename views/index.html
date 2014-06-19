@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Discussion Board</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"/>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="underscore.js"></script>
+    <script src="backbone.js"></script>
+    <script src="moment.min.js"></script>
+    <script src="serializeJSON.js"></script>
+    <script src="javascripts/client.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    
+    <div class='container'>
+      <div id='welcome'>Discussion Board</div>
+      <div id='topics-container'></div>
+    </div>
+    
+    <script>
+      $(initialize);
+      $(WikiProject.initialize);
+    </script>
+    
+    <script id='topic-show' type='text/template'>
+      <div class='topic' id="topic-div<%= topicCount %>">
+        <div class='topic-header' id="topic-header-<%= topicCount %>">
+          <h1>
+            <span class='glyphicon glyphicon-chevron-down' id="topic-glyph-<%= topicCount %>"/>
+              <%= topic.get('topictitle') %>
+          </h1>
+        </div>
+        <div class='topic-body' id="topic-body-<%= topicCount %>">
+          <ul id="topic<%= topicCount %>">
+            <li class='comment-li' id="comment<%= topic.parentComment.escape('id') %>">
+              <div class='parent comment-header'> 
+                <h2><span class='glyphicon glyphicon-user'/><%= topic.parentComment.get('author') %>
+                  <div id='time-ago' class='time pull-right'>
+                    <%= age %>
+                  </div>
+                </h2>
+              </div>
+              <%= topic.parentComment.get('posttext') %>
+              <div class='comment-form'>
+                <a class='comment-button' id="comment-button-<%= topic.parentComment.escape('id') %>">
+                  Reply
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </script>
+    
+    <script id='comment-show' type='text/template'>
+      <li id="comment<%= comment.escape('id') %>">
+        <div class="comment-header">
+          <h2>
+            <span class='glyphicon glyphicon-user'/>
+            <%= comment.escape('author') %>
+            <div id='time-ago' class='time pull-right'>
+              <%= age %>
+            </div>
+          </h2>
+        </div>
+        <%= comment.get('posttext') %>
+        <div class='comment-form'>
+          <a class='comment-button' id="comment-button-<%= comment.escape('id') %>">Reply</a>
+        </div>
+      </li>
+    </script>
+  </body>
+</html>

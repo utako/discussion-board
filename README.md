@@ -16,5 +16,7 @@
 
 * I had a lot of fun with this. I spent a little over three hours on it, and I was tempted to spend some more time on it (persisting the comments, for instance, adding some more jQuery embellishments).
 
+### Links
+
 * [node](http://nodejs.org/)
 * [npm](https://www.npmjs.org/)
